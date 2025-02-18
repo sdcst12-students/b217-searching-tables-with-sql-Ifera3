@@ -51,16 +51,68 @@ Assignment:
 Answer the following questions about NPC's from the database. They are stored in a table called _npc_
 
 What is the structure of the table?  What are the columns and what datatypes do they store?
+
+```
+the id as a integer, the strength as a tiny integer, the intelligence as a tiny integer, the wisdom as a tiny integer,  the dexterity as a tiny integer, the constitution as a tiny integer, the charisma as a tiny integer, the class as a tiny text, the level as a tiny integer, the gold as a tiny integer, 
+```
+
 How many records are in the table?
+
+```
+10000
+```
+
 How many Knights are in the table?
+
+```
+780
+```
+
 Which class has the highest number of members?
+
+```
+Thiefs with 794 members
+```
+
 What is the ID number of the Jester with the most gold?
+
+```
+id 1907 with 51 gold
+```
+
 What is the total gold of the 100 wealthiest npc's in the table?
+
+```
+the total gold is 4917
+```
+
 What is the total gold of the 100 wealthiest npc's under level 5?
+
+```
+the total gold is 1967
+```
+
 What is the stats of the Bard with the highest strength?
+
+```
+the stats are strength : 18, intelligence : 7, wisdom : 13, dexterity : 8, constitution : 11, charisma : 12
+```
+
 What is the ID number of the npc with highest total sum of their 6 primary stats?
+
+```
+the id is 2693 with a  total of 89
+```
+
 What percentage of all fighter classes (Barbarian, Warrior, Knight, Samurai) are Warriors?
+
+```
+24.67%
+```
+
 What is the average hitpoints per level of the npc's that are level 10 or higher?
+
+
 
 Problem:
 Knights, Warriors, Barbarian, Samurai and Rangers have Strength as their Primary Stat

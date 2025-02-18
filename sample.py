@@ -8,7 +8,9 @@ cursor = connection.cursor()
 q = 'pragma table_info(npc);'
 cursor.execute(q)
 result = cursor.fetchall()
-#print(result)
+print(result)
+
+exit()
 
 q = 'select * from npc where level<3 order by level desc;'
 #q = 'select * from npc where level>3 and level < 6 order by level asc limit 20;'
