@@ -83,13 +83,13 @@ id 1907 with 51 gold
 What is the total gold of the 100 wealthiest npc's in the table?
 
 ```
-the total gold is 4917
+the total gold is 4917 of the 100 wealthiest npc's in the table
 ```
 
 What is the total gold of the 100 wealthiest npc's under level 5?
 
 ```
-the total gold is 1967
+the total gold of the 100 wealthiest npc's in the table under level 5 is 1967
 ```
 
 What is the stats of the Bard with the highest strength?
@@ -107,12 +107,14 @@ the id is 2693 with a  total of 89
 What percentage of all fighter classes (Barbarian, Warrior, Knight, Samurai) are Warriors?
 
 ```
-24.67%
+24.67% of all fighter classes are Warriors
 ```
 
 What is the average hitpoints per level of the npc's that are level 10 or higher?
 
-
+```
+The average hitpoints per level of the npc's that are level 10 or higher is 4.5
+```
 
 Problem:
 Knights, Warriors, Barbarian, Samurai and Rangers have Strength as their Primary Stat
@@ -131,4 +133,6 @@ con 6
 cha 5
 They have picked the correct class because their wisdom stat was the highest
 
-
+```
+7881 NPCs have chosen the wrong class
+```

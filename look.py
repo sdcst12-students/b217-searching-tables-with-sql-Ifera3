@@ -5,10 +5,54 @@ import sqlite3
 connection = sqlite3.connect('dbase.db')
 cursor = connection.cursor()
 
-query = 'select class from npc where (class = "Barbarian") or (class = "Warrior") or (class = "Knight") or (class = "Samurai");'
+query = 'select id,class,strength,intelligence,wisdom,dexterity,constitution,charisma from npc;'
 cursor.execute(query)
 result = cursor.fetchall()
 
+badChose = 0
+goodChose = 0
+for i in result:
+    if i[1] == 'Knight' or i[1] == 'Warrior' or i[1] == 'Barbarian' or i[1] == 'Samurai' or i[1] == 'Ranger':
+        if i[2] == max((i[2],i[3],i[4],i[5],i[6],i[7])):
+            goodChose += 1
+        else:
+            badChose += 1
+    elif i[1] == 'Sage' or i[1] == 'Sorcerer' or i[1] == 'Bard' or i[1] == 'Jester':
+        if i[3] == max((i[2],i[3],i[4],i[5],i[6],i[7])):
+            goodChose += 1
+        else:
+            badChose += 1
+    elif i[1] == 'Thief' or i[1] == 'Assassin' or i[1] == 'Monk':
+        if i[5] == max((i[2],i[3],i[4],i[5],i[6],i[7])):
+            goodChose += 1
+        else:
+            badChose += 1
+    elif i[1] == 'Priest':
+        if i[4] == max((i[2],i[3],i[4],i[5],i[6],i[7])):
+            goodChose += 1
+        else:
+            badChose += 1
+
+if badChose + goodChose != len(result):
+    print("not all npc inclouded")
+
+print(badChose)
+
+'''
+query = 'select hp, level from npc where level >= 10;'
+cursor.execute(query)
+result = cursor.fetchall()
+
+hpPerlv = []
+for i in result:
+    hpPerlv.append(round(i[0]/i[1],2))
+avreage = round(sum(hpPerlv)/len(hpPerlv),2)
+print(avreage)
+'''
+'''
+query = 'select class from npc where (class = "Barbarian") or (class = "Warrior") or (class = "Knight") or (class = "Samurai");'
+cursor.execute(query)
+result = cursor.fetchall()
 Warriors = 0
 total = len(result)
 for i in result:
@@ -17,7 +61,7 @@ for i in result:
         Warriors += 1
 precent = round((Warriors/total) * 100,2)
 print(precent)
-
+'''
 '''
 query = 'select id,strength,intelligence,wisdom,dexterity,constitution,charisma from npc;'
 cursor.execute(query)
